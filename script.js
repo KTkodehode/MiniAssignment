@@ -1,11 +1,13 @@
-document.body.style="margin:0;background-repeat: no-repeat; background-size: cover; background-image: url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80);height: 100vh; display: inline-flex;";
+document.body.style="margin:0;background-repeat: no-repeat; background-size: cover; background-image: url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80);height: 100vh; display: flex;";
 
 document.querySelector(".top-container").style = "margin-top: 130px; position: relative;"
-document.querySelector(".second-container").style = "margin: -50px 0px 10px 130px; position: relative; display: block; overflow:auto;"
+document.querySelector(".second-container").style = "margin: -50px 0px 10px 130px; position: relative; display: block;"
 document.querySelector("h1").textContent ="Shopping List";
 
 document.querySelector("h2").textContent ="Image Randomizer";
 document.querySelector("h2").style= "margin: 100px 130px 0 130px;"
+document.querySelector("h3").textContent ="Whats this Sorcery";
+document.querySelector("h3").style= "writing-mode: vertical-rl; margin: 50px 0 0 200px; text-orientation: upright;"
 document.getElementById("pics").style= "position:absolute; margin-top: 10px;"
 document.getElementById("img-btn").style= "margin:20px 0 0 185px;"
 
@@ -49,7 +51,7 @@ function showImage() {
     height: "880"},
     {   link: "./images/statue.jpg",
     width: "540",
-    height: "880"}
+    height: "880",}
 ];
   
   let random = Math.floor(Math.random() * images.length); // Randomize Array
@@ -62,9 +64,12 @@ function showImage() {
   let Imgs = document.getElementsByTagName("img"); // stores tag created to variable
   document.getElementsByTagName("img").style="border: 10px solid black;";
   
-  if (Imgs.length > 0) {                        // If array is bigger than 0, replace image at index 0, if not append one
+  if (Imgs.length > 0) {   // If array is bigger than 0, replace image at index 0, if not append one
     document.body.replaceChild(image, Imgs[0]);
   } else {
     document.body.appendChild(image);
   }
 }
+
+// Loop
+document.getElementById("Looper").style= "font-size: 30px; border-radius: 10px; width: 202px; margin: 100px 0 0 102px;";
